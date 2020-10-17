@@ -1,0 +1,41 @@
+// Configuration options
+{
+    "device_type": "barani",
+    "device": {
+        "name": "Barani MeteoTemp",
+        "poll_interval": 1000,
+        "id": "barani",
+        "channels": [
+            {
+                "name": "temperature_raw",
+                "reg_type": "input",
+                "address": "0x0",
+                "format": "u16",
+                "type": "temperature",
+                "scale": 1,
+                "readonly": true,
+                "error_value": "0xFFFF"
+            },
+            {
+                "name": "humidity_raw",
+                "reg_type": "input",
+                "address": "0x4",
+                "format": "u16",
+                "type": "rel_humidity",
+                "scale": 0.01,
+                "readonly": true,
+                "error_value": "0xFFFF"
+            },
+            {
+                "name": "dew_point_raw",
+                "reg_type": "input",
+                "address": "0x1",
+                "format": "u16",
+                "type": "temperature",
+                "scale": 1,
+                "readonly": true,
+                "error_value": "0xFFFF"
+            }
+        ]
+    }
+}
